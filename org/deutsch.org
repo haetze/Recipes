@@ -1,0 +1,9 @@
+#+TITLE: Rezepte in deutsch
+#+DATE: 28 Aug 2020
+#+AUTHOR: Richard Stewing
+#+OPTIONS: toc:nil
+#+SETUPFILE: ../util/settings.org
+#+INCLUDE: ../util/common.org
+
+
+- [[./Bruschetta.org][Bruschetta]]

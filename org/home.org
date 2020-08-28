@@ -1,0 +1,7 @@
+#+TITLE: Recipes
+#+OPTIONS: toc:nil
+#+SETUPFILE: ../util/settings.org
+#+INCLUDE: ../util/common.org
+
+
+- [[./deutsch.org][Rezepte in deutsch]]
