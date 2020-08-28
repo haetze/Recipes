@@ -16,13 +16,17 @@ help:
 	@echo "Available Targets:"
 	@echo "  clean:      Removes target files."
 	@echo "  website:    Creates HTML Files in html/"
+	@echo "  markdown:   Creates MD Files in md/"
+	@echo "  all:        Creates MD and HTML Files"
 	@echo "  publish:    Commit with current date and time and push to $(REPOSITORY)"
 
 
+
 clean:
-	rm -f $(HTML-DIR)/*.html
+	rm -f $(HTML-OBJ)
 	rm -f *~
 	rm -f org/*~
+	rm -f $(MD-OBJ)
 
 html/%.html : org/%.org util/settings.org util/common.org
 	mkdir -p $(HTML-DIR)
@@ -37,6 +41,8 @@ md/%.md : org/%.org util/settings.org util/common.org
 
 website: $(HTML-OBJ)
 markdown: $(MD-OBJ)
+
+all: website markdown
 
 publish:
 	git commit -m "$(shell date)" -a || true
